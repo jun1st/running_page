@@ -40,6 +40,8 @@ class Nike:
             },
             timeout=60,
         )
+
+        print(response.text)
         response.raise_for_status()
 
         access_token = response.json()["access_token"]
