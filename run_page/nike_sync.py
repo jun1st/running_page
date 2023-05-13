@@ -39,7 +39,7 @@ class Nike:
     def __init__(self, access_token):
         self.client = httpx.Client()
 
-        logger.info("fetch access token: " + refresh_token")
+        logger.info("fetch access token: " + refresh_token)
         response = self.client.post(
             TOKEN_REFRESH_URL,
             headers=NIKE_HEADERS,
