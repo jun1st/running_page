@@ -32,9 +32,12 @@ class Nike:
     def __init__(self, refresh_token):
         self.client = httpx.Client()
 
+        print(refresh_token)
+
+
         response = self.client.post(
             TOKEN_REFRESH_URL,
-            json={
+            data={
                 "refresh_token": refresh_token,
                 "client_id": NIKE_CLIENT_ID,
                 "grant_type": "refresh_token",
