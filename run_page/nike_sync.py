@@ -39,9 +39,7 @@ class Nike:
     def __init__(self, access_token):
         self.client = httpx.Client()
 
-        print("secret: ")
-        print(refresh_token)
-
+        logger.info("fetch access token: " + refresh_token")
         response = self.client.post(
             TOKEN_REFRESH_URL,
             headers=NIKE_HEADERS,
@@ -95,7 +93,8 @@ class Nike:
         return response.json()
 
 
-def run(refresh_token, is_continue_sync=False):
+def run(refresh_token):
+    logger.warn("refresh_token: " + refresh_token)
     nike = Nike(refresh_token)
     if is_continue_sync:
         last_id_local = get_last_before_id()
