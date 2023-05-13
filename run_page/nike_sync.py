@@ -428,7 +428,8 @@ if __name__ == "__main__":
         help="Continue syncing from the last activity",
     )
     options = parser.parse_args()
-    run(options.refresh_token, options.continue_sync)
+    logger.info(options)
+    run(options.refresh_token)
 
     time.sleep(2)
     files = get_to_generate_files()
