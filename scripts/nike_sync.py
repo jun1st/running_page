@@ -34,7 +34,7 @@ class Nike:
         response = self.client.post(
             TOKEN_REFRESH_URL,
             data={
-                "refresh_token": refresh_token,
+                "refresh_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjhlM2VhNjIyLTllNjQtNDU3OS04MzhhLWQ1ZmM5ODc0YjlhZXNpZyJ9.eyJpYXQiOjE2ODM5ODcyMTAsImV4cCI6MTcxNTUyMzIxMCwiaXNzIjoib2F1dGgyaWR0IiwianRpIjoiOGU0NjM4MmEtZWYwNy00Njc4LWFlZWQtNWY1ZmYyMzJmN2RhIiwiYXVkIjoib2F1dGgyaWR0IiwidHJ1c3QiOjEwMCwibGF0IjoxNjc5NDYxNDU4LCJjbGkiOiJmNGU0YjlkYmY3ODMzOWNmN2NlN2ZkMmI2MTIwYzU3ZiIsInN1YiI6IjFhOGU2ZGU0LWU5ZGEtNDM4My1hOThmLTBiYWUwZDhjNGQ5NiIsInNidCI6Im5pa2U6cGx1cyIsInNjcCI6WyJuaWtlLmRpZ2l0YWwiXSwicnNpZCI6IjMwMjQzMjUyLTlmZDQtNDE4Ni05ZmI3LTJkOTRmNGQ0MDAxZiIsImxyc2NwIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgcGhvbmUgZmxvdyBvZmZsaW5lX2FjY2VzcyBuaWtlLmRpZ2l0YWwifQ.mRhExaxoWg6GezCIPwJbRyM4dzi6XuN1zvWfTraKAqAgtogIUtfudkR0yeqSn5UvoYLFJQMyAgbXoe5nKH22726zuBne09ox8fwI6O0ZyKjjKkug_ck_-hPGWuUJ8vc03bvBc8b62SITmZzMYih9gG48q_nfDlV2_lxK7nIejx1UEJczAhqJaPT7xW66Tw2XvS_e4d2AtbM7OsZns75MMMDlvFqieegeyQ6MyfEkZ-pedwDTIwrFIOhmWc2ilRvNdj0lQUz9oRXdojKRU3Utb99vsfshHWGXYrhgsvy-fCprIeNNOCJCDRaUyO5BBeSktowL0DsndEAlMSLI_KJysg",
                 "client_id": NIKE_CLIENT_ID,
                 "grant_type": "refresh_token",
             },
