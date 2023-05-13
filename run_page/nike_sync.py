@@ -428,7 +428,7 @@ if __name__ == "__main__":
         help="Continue syncing from the last activity",
     )
     options = parser.parse_args()
-    logger.info(options)
+    print(options)
     run(options.refresh_token)
 
     time.sleep(2)
