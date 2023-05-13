@@ -39,6 +39,9 @@ class Nike:
     def __init__(self, refresh_token):
         self.client = httpx.Client()
 
+        print(refresh_token)
+
+
         response = self.client.post(
             TOKEN_REFRESH_URL,
             headers=NIKE_HEADERS,
