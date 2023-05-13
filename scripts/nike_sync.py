@@ -413,6 +413,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("refresh_token", help="API refresh access token for nike.com")
     options = parser.parse_args()
+    logger.info(options)
     run(options.refresh_token)
 
     time.sleep(2)
