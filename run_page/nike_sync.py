@@ -38,9 +38,6 @@ NIKE_HEADERS = {
 class Nike:
     def __init__(self, refresh_token):
         self.client = httpx.Client()
-
-        token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjhlM2VhNjIyLTllNjQtNDU3OS04MzhhLWQ1ZmM5ODc0YjlhZXNpZyJ9.eyJpYXQiOjE2ODM5NTI5NzIsImV4cCI6MTcxNTQ4ODk3MiwiaXNzIjoib2F1dGgyaWR0IiwianRpIjoiMThlOTg3ZGMtYmE0OC00YWRkLThlMjctNmRiYThmMWU5NjcyIiwiYXVkIjoib2F1dGgyaWR0IiwidHJ1c3QiOjEwMCwibGF0IjoxNjc5NDYxNDU4LCJjbGkiOiJmNGU0YjlkYmY3ODMzOWNmN2NlN2ZkMmI2MTIwYzU3ZiIsInN1YiI6IjFhOGU2ZGU0LWU5ZGEtNDM4My1hOThmLTBiYWUwZDhjNGQ5NiIsInNidCI6Im5pa2U6cGx1cyIsInNjcCI6WyJuaWtlLmRpZ2l0YWwiXSwicnNpZCI6Ijk3MWQyNDMzLTQzOGItNDdmMS04ODI2LWQ0ZTE4OTFiZjcxYyIsImxyc2NwIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgcGhvbmUgZmxvdyBvZmZsaW5lX2FjY2VzcyBuaWtlLmRpZ2l0YWwifQ.C7GJIGw0i0kYMFpWz5qbJ17g1_pSKfoXa2FxYAFvXj77vzQ7-vrhTPDpdm45lrtlBBwpZdKLpEgCciBn4SiWprvdyCeQqv2sCdr2bl1VAdedqTZsVHTedd09E0O_tLAHDq4pO-jwFvw0-oH5EyQj6lSj7E0ry7mInwBhER9j7y7wJlu0X1aOePVOTH_zW9LDW_k-L17M7Pw6MXQL3xCo2vCh-luIuDwYmC9iNiHyYUKWDFJZkq60-cP7xqhEUFRFd6upcG4zTPvGYFH14QAkBHSyn2dWZie46PX7Oeji5QDB8vxlboBKVM9tPGC1lnGs7I-rbxbp5Kp4XZ4HSTePrQ",
-        print(token)
         response = self.client.post(
             TOKEN_REFRESH_URL,
             headers=NIKE_HEADERS,
