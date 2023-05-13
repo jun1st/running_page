@@ -39,6 +39,23 @@ class Nike:
     def __init__(self, access_token):
         self.client = httpx.Client()
 
+        print("secret: ")
+        print(refresh_token)
+
+        response = self.client.post(
+            TOKEN_REFRESH_URL,
+            headers=NIKE_HEADERS,
+            json={
+                "refresh_token": refresh_token,
+                "client_id": b64decode(NIKE_CLIENT_ID).decode(),
+                "grant_type": "refresh_token",
+                "ux_id": b64decode(NIKE_UX_ID).decode(),
+            },
+            timeout=60,
+        )
+        response.raise_for_status()
+
+        access_token = response.json()["access_token"]
         self.client.headers.update({"Authorization": f"Bearer {access_token}"})
 
     def get_activities_since_timestamp(self, timestamp):
