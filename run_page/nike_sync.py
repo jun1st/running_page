@@ -50,7 +50,8 @@ class Nike:
             timeout=60,
         )
 
-        print(response.text)
+        print("this is response: ")
+        print(response.content)
         response.raise_for_status()
 
         access_token = response.json()["access_token"]
@@ -426,7 +427,7 @@ if __name__ == "__main__":
         help="Continue syncing from the last activity",
     )
     options = parser.parse_args()
-    print(options.refresh_token)
+
     run(options.refresh_token)
 
     time.sleep(2)
