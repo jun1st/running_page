@@ -34,7 +34,7 @@ class Nike:
         response = self.client.post(
             TOKEN_REFRESH_URL,
             data={
-                "refresh_token": refresh_token
+                "refresh_token": refresh_token,
                 "client_id": NIKE_CLIENT_ID,
                 "grant_type": "refresh_token",
             },
