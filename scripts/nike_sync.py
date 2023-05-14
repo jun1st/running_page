@@ -33,7 +33,7 @@ class Nike:
         self.client = httpx.Client()
         response = self.client.post(
             TOKEN_REFRESH_URL,
-            data={
+            json={
                 "refresh_token": refresh_token,
                 "client_id": NIKE_CLIENT_ID,
                 "grant_type": "refresh_token",
@@ -41,7 +41,8 @@ class Nike:
             timeout=60,
         )
 
-        print(response.text)
+        print("this is response: ")
+        print(response.content)
         response.raise_for_status()
 
         access_token = response.json()["access_token"]
@@ -411,7 +412,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("refresh_token", help="API refresh access token for nike.com")
     options = parser.parse_args()
-    print(options.refresh_token)
+
     run(options.refresh_token)
 
     time.sleep(2)
