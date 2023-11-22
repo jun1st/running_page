@@ -4,7 +4,7 @@
     "app_id": "com.nike.sport.running.ios",
     "start_epoch_ms": 1686816643913,
     "end_epoch_ms": 1686819717496,
-    "last_modified": 1686871789284,
+    "last_modified": 1687874742417,
     "active_duration_ms": 2889774,
     "session": false,
     "delete_indicator": false,
@@ -99,9 +99,11 @@
         "com_nike_temperature": "28.45",
         "com_nike_weather": "mostly-cloudy-day",
         "com_nike_weathersource": "appleWeatherKit",
-        "location": "outdoors"
+        "location": "outdoors",
+        "shoe_id": "638de289-4347-42ba-b728-9b601ce38c6b"
     },
     "change_tokens": [
+        "fcbae25d766d0a9234760f2a4e6ac73c8ad8179c87103206aeb698fa4244d893:1687874742417",
         "631571f457543ee80443f1b62f210d7f4c436b28d858b62874a16ca6b7b92b9f:1686871789284",
         "d89fe36973fcf79107b264f6efb143c4ca80c544c4d610fd102a1227f25c8ff7:1686822321699"
     ],

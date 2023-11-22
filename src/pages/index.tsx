@@ -21,7 +21,6 @@ import {
   scrollToMap,
   sortDateFunc,
   titleForShow,
-  RunIds,
 } from '@/utils/utils';
 
 const Index = () => {

@@ -1,5 +1,4 @@
 """Assorted utility methods for use in creating posters."""
-
 # Copyright 2016-2019 Florian Pigorsch & Contributors. All rights reserved.
 #
 # Use of this source code is governed by a MIT-style
