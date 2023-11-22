@@ -4,7 +4,7 @@
     "app_id": "com.nike.sport.running.ios",
     "start_epoch_ms": 1687266550021,
     "end_epoch_ms": 1687268356290,
-    "last_modified": 1687268360121,
+    "last_modified": 1687913996844,
     "active_duration_ms": 1804974,
     "session": false,
     "delete_indicator": false,
@@ -90,16 +90,21 @@
         "com.nike.running.ios.healthkit"
     ],
     "tags": {
+        "com_nike_name": "\u661f\u671f\u4e8c \u591c\u8dd1",
         "com_nike_running_goaltype": "duration",
         "com_nike_running_originalactivityid": "CDA846DF-6A07-4A15-A26E-BF9CAA6FBAE9",
         "com_nike_running_recordingappversion": "7.24.0",
         "com_nike_running_recordingsource": "phone",
         "com_nike_running_syncappversion": "7.24.0",
         "com_nike_running_syncsource": "phone",
+        "com_nike_temperature": "26.62",
+        "com_nike_weather": "cloudy",
+        "com_nike_weathersource": "appleWeatherKit",
         "location": "outdoors",
         "shoe_id": "8bbe46fd-e14a-442f-9c6b-d69e900a1165"
     },
     "change_tokens": [
+        "b91645fabfc862a08a4975299282c909e521c70964229551692843f96014c610:1687913996844",
         "cc5a6d746fa38635cbe40dc56457565fef5bcebd572bf86f304f5c9cea91783a:1687268360121"
     ],
     "metric_types": [
