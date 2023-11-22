@@ -1,5 +1,4 @@
 """Create a poster from track data."""
-
 import gettext
 import locale
 from collections import defaultdict
