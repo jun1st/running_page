@@ -3,9 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   '@mapbox/mapbox-gl-language': ^1.0.0
   '@mapbox/polyline': ^1.1.1
+  '@svgr/core': ^8.1.0
   '@svgr/plugin-svgo': ^8.1.0
+  '@types/geojson': ^7946.0.14
   '@types/mapbox__polyline': ^1.0.2
   '@types/node': ^20.3.3
+  '@types/prop-types': ^15.7.11
   '@types/react': ^18.2.14
   '@types/react-dom': ^18.2.6
   '@typescript-eslint/parser': ^5.59.2
@@ -39,7 +42,8 @@ specifiers:
 dependencies:
   '@mapbox/mapbox-gl-language': 1.0.1_mapbox-gl@2.15.0
   '@mapbox/polyline': 1.2.1
-  '@svgr/plugin-svgo': 8.1.0_typescript@5.3.2
+  '@svgr/core': 8.1.0_typescript@5.3.2
+  '@svgr/plugin-svgo': 8.1.0_3ymabyejltrkq4xxpxqwf7v7km
   '@vercel/analytics': 0.1.11_react@18.2.0
   '@vitejs/plugin-react': 4.2.0_vite@4.5.0
   gcoord: 0.3.2
@@ -62,8 +66,10 @@ dependencies:
   vite-tsconfig-paths: 4.2.1_olzecms676ca7bazgez5tklngq
 
 devDependencies:
+  '@types/geojson': 7946.0.14
   '@types/mapbox__polyline': 1.0.5
   '@types/node': 20.9.4
+  '@types/prop-types': 15.7.11
   '@types/react': 18.2.38
   '@types/react-dom': 18.2.17
   '@typescript-eslint/parser': 5.62.0_t4y562kuozn2x6kqiutrjmhi5a
@@ -837,12 +843,13 @@ packages:
       - supports-color
     dev: false
 
-  /@svgr/plugin-svgo/8.1.0_typescript@5.3.2:
+  /@svgr/plugin-svgo/8.1.0_3ymabyejltrkq4xxpxqwf7v7km:
     resolution: {integrity: sha512-Ywtl837OGO9pTLIN/onoWLmDQ4zFUycI1g76vuKGEz6evR/ZTJlJuz3G/fIkb6OVBJ2g0o6CGJzaEjfmEo3AHA==}
     engines: {node: '>=14'}
     peerDependencies:
       '@svgr/core': '*'
     dependencies:
+      '@svgr/core': 8.1.0_typescript@5.3.2
       cosmiconfig: 8.3.6_typescript@5.3.2
       deepmerge: 4.3.1
       svgo: 3.2.0
@@ -888,19 +895,19 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: false
 
-  /@types/geojson/7946.0.13:
-    resolution: {integrity: sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ==}
+  /@types/geojson/7946.0.14:
+    resolution: {integrity: sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==}
 
   /@types/mapbox-gl/2.7.19:
     resolution: {integrity: sha512-pkRdlhQJNbtwcKJSVC4uuOA6M3OlOObIMhNecqHB991oeaDF5XkjSIRaTE0lh5p4KClptSCxW6MBiREVRHrl2A==}
     dependencies:
-      '@types/geojson': 7946.0.13
+      '@types/geojson': 7946.0.14
     dev: false
 
   /@types/mapbox__polyline/1.0.5:
     resolution: {integrity: sha512-KNkXjtDPu3AgNbtikPyVqZEB5sF+Ls7sFtaZEgGEdU9YZUO5kF9nfDsJAWQqkBW8UVQNbq7Ob3Kube8l/b+3tQ==}
     dependencies:
-      '@types/geojson': 7946.0.13
+      '@types/geojson': 7946.0.14
     dev: true
 
   /@types/minimist/1.2.5:
