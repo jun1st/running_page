@@ -26,7 +26,6 @@ SYNCED_ACTIVITY_FILE = os.path.join(parent, "synced_activity.json")
 
 BASE_TIMEZONE = "Asia/Shanghai"
 
-
 start_point = namedtuple("start_point", "lat lon")
 run_map = namedtuple("polyline", "summary_polyline")
 

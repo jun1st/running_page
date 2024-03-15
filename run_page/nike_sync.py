@@ -38,7 +38,6 @@ NIKE_HEADERS = {
 class Nike:
     def __init__(self, refresh_token):
         self.client = httpx.Client()
-
         response = self.client.post(
             TOKEN_REFRESH_URL,
             headers=NIKE_HEADERS,
@@ -50,6 +49,9 @@ class Nike:
             },
             timeout=60,
         )
+
+        print("this is response: ")
+        print(response.content)
         response.raise_for_status()
 
         access_token = response.json()["access_token"]

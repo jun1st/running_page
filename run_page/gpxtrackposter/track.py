@@ -1,5 +1,4 @@
 """Create and maintain info about a given activity track (corresponding to one GPX file)."""
-
 # Copyright 2016-2019 Florian Pigorsch & Contributors. All rights reserved.
 # 2019-now yihong0618 Florian Pigorsch & Contributors. All rights reserved.
 # Use of this source code is governed by a MIT-style
