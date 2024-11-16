@@ -96,9 +96,14 @@ English | [简体中文](https://github.com/yihong0618/running_page/blob/master/
 | [PPZ](https://github.com/8824PPZ)                 | <https://run.dudubbbbbbbbb.top/>               | Strava      |
 | [Yer1k](https://github.com/Yer1k)                 | <https://running.yer1k.com/>                   | Strava      |
 | [AlienVision](https://github.com/weaming)         | <https://run.drink.cafe/>                      | Strava      |
-| [闻笑忘](https://wenxiaowan.com)                | <https://wenxiaowan.com>                       | 苹果健身     |
+| [闻笑忘](https://wenxiaowan.com)                   | <https://wenxiaowan.com>                       | 苹果健身    |
 | [Vensent](https://github.com/Vensent)             | <https://vensent.github.io/workouts_page/>     | Garmin      |
-| [Zeonsing](https://github.com/NoonieBao)             | <https://run.jogzeal.com/>     | Coros      |
+| [Zeonsing](https://github.com/NoonieBao)          | <https://run.jogzeal.com/>                     | Coros       |
+| [yaoper](https://github.com/yaoper)               | <https://running.yaoper.cn>                    | codoon      |
+| [laqieer](https://github.com/laqieer)             | <https://laqieer.github.io/running_page/>      | Strava      |
+| [Guoxin](https://github.com/guoxinl)              | <https://running.guoxin.space/>                | Strava      |
+| [laihj](https://github.com/laihj)                 | <https://run.laihjx.com/>                      | 苹果健身     |
+| [Ginta](https://github.com/mar-heaven)            | <https://running.ginta.top/>                   | Keep         |
 </details>
 
 ## How it works
@@ -121,6 +126,7 @@ English | [简体中文](https://github.com/yihong0618/running_page/blob/master/
 
 - **[Garmin](#garmin)**
 - **[Garmin-CN](#garmin-cnchina)**
+- **[New Way To Sync Nike Run Club](#nike-run-club-new)**
 - **[Nike Run Club](#nike-run-club)**
 - **[Strava](#strava)**
 - **[GPX](#gpx)**
@@ -129,6 +135,7 @@ English | [简体中文](https://github.com/yihong0618/running_page/blob/master/
 - **[Garmin-CN_to_Garmin(Sync Garmin-CN activities to Garmin Global)](#garmin-cn-to-garmin)**
 - **[Nike_to_Strava(Using NRC Run, Strava backup data)](#nike_to_strava)**
 - **[Tcx_to_Strava(upload all tcx data to strava)](#tcx_to_strava)**
+- **[Tcx_to_Garmin(upload all tcx data to Garmin)](#tcx_to_garmin)**
 - **[Gpx_to_Strava(upload all gpx data to strava)](#gpx_to_strava)**
 - **[Garmin_to_Strava(Using Garmin Run, Strava backup data)](#garmin_to_strava)**
 - **[Strava_to_Garmin(Using Strava Run, Garmin backup data)](#strava_to_garmin)**
@@ -432,6 +439,35 @@ python3(python) run_page/garmin_sync_cn_global.py ${garmin_cn_secret_string} ${g
 
 </details>
 
+### Nike Run Club New
+
+<details>
+<summary>Get your <code>Nike Run Club</code> data</summary>
+
+<br>
+
+> Please note:Due to the discontinuation of Nike Run Club in mainland China, you can only log in through a VPN. Before starting, please ensure that you are using a global non-mainland China proxy, allowing you to access `nike.com` instead of `nike.com.cn`, as shown in the following image.
+
+![nike.com](https://github.com/user-attachments/assets/8ce6ae8f-4bc6-4522-85ec-3e5b7590e96d)
+<br>
+
+1. Sign in/Sign up [NikeRunClub](https://www.nike.com/) account
+   ![login](https://github.com/user-attachments/assets/659341fb-4abf-491e-bda7-bfca968921b3)
+2. after successful login,openF12->Application->localstorage-> copy the content of "access_token" from the value of key`https://www.nike.com`.
+![developer_mode](https://github.com/user-attachments/assets/c932318d-a123-4505-8fd8-b46946c25d29)
+3. modify the code in the "nike_sync.py" file and paste the content you just copied as shown in the following image.
+![nike_sync.py](https://github.com/user-attachments/assets/6de91725-ed17-4338-96d5-727eb75cee24)
+4. Execute in the root directory , you should be able to see the image below, and then you can log into your account on the mobile as usual:
+
+```bash
+python3(python) run_page/nike_sync.py aaaaa
+```
+![tg_image_166091873](https://github.com/user-attachments/assets/9d4851d6-849a-4bb7-8ffe-5358fa7328b2)
+
+if you want to automate the submission of NRC data, you can refer to [issue692](https://github.com/yihong0618/running_page/issues/692#issuecomment-2218849713).
+
+</details>
+
 ### Nike Run Club
 
 <details>
@@ -580,6 +616,33 @@ example：
 python3(python) run_page/tcx_to_strava_sync.py xxx xxx xxx
 or
 python3(python) run_page/tcx_to_strava_sync.py xxx xxx xxx --all
+```
+
+4. if you want to all files add args `--all`
+
+</details>
+
+### TCX_to_Garmin
+
+<details>
+<summary>upload all tcx files to garmin</summary>
+
+<br>
+
+1. follow the garmin steps
+2. copy all your tcx files to TCX_OUT
+3. Execute in the root directory:
+
+```bash
+python3 run_page/tcx_to_garmin_sync.py ${{ secrets.GARMIN_SECRET_STRING_CN }} --is-cn
+```
+
+example：
+
+```bash
+python run_page/tcx_to_garmin_sync.py xxx --is-cn
+or Garmin Global
+python run_page/tcx_to_garmin_sync.py xxx
 ```
 
 4. if you want to all files add args `--all`
@@ -941,6 +1004,10 @@ Before submitting PR:
 # Support
 
 Just enjoy it~
+
+# Raycast Extension
+
+<a title="Install running-page Raycast Extension" href="https://www.raycast.com/Lemon/running-page"><img src="https://www.raycast.com/Lemon/running-page/install_button@2x.png?v=1.1" height="64" alt="" style="height: 64px;"></a>
 
 # FAQ
 
