@@ -38,23 +38,23 @@ NIKE_HEADERS = {
 class Nike:
     def __init__(self, access_token):
         self.client = httpx.Client()
+        response = self.client.post(
+            TOKEN_REFRESH_URL,
+            headers=NIKE_HEADERS,
+            json={
+                "refresh_token": refresh_token,
+                "client_id": b64decode(NIKE_CLIENT_ID).decode(),
+                "grant_type": "refresh_token",
+                "ux_id": b64decode(NIKE_UX_ID).decode(),
+            },
+            timeout=60,
+        )
 
-        # HINT: if you have old nrc refresh_token un comments this lines it still works
+        print("this is response: ")
+        print(response.content)
+        response.raise_for_status()
 
-        # response = self.client.post(
-        #     TOKEN_REFRESH_URL,
-        #     headers=NIKE_HEADERS,
-        #     json={
-        #         "refresh_token": access_token,  # its refresh_token for tesy here
-        #         "client_id": b64decode(NIKE_CLIENT_ID).decode(),
-        #         "grant_type": "refresh_token",
-        #         "ux_id": b64decode(NIKE_UX_ID).decode(),
-        #     },
-        #     timeout=60,
-        # )
-        # response.raise_for_status()
-        # access_token = response.json()["access_token"]
-
+        access_token = response.json()["access_token"]
         self.client.headers.update({"Authorization": f"Bearer {access_token}"})
 
     def get_activities_since_timestamp(self, timestamp):
@@ -94,7 +94,7 @@ class Nike:
         return response.json()
 
 
-def run(refresh_token, is_continue_sync=False):
+def run(refresh_token):
     nike = Nike(refresh_token)
     if is_continue_sync:
         last_id_local = get_last_before_id()
@@ -361,6 +361,7 @@ def parse_no_gpx_data(activity):
         "id": int(nike_id),
         "name": "run from nike",
         "type": "Run",
+        "subtype": "Run",
         "start_date": datetime.strftime(start_date, "%Y-%m-%d %H:%M:%S"),
         "end": datetime.strftime(end_date, "%Y-%m-%d %H:%M:%S"),
         "start_date_local": datetime.strftime(start_date_local, "%Y-%m-%d %H:%M:%S"),
@@ -426,7 +427,7 @@ if __name__ == "__main__":
         help="Continue syncing from the last activity",
     )
     options = parser.parse_args()
-    run(options.refresh_token, options.continue_sync)
+    run(options.refresh_token)
 
     time.sleep(2)
     files = get_to_generate_files()
