@@ -20,7 +20,6 @@ _site/
 
 config.yaml
 .venv/
-<<<<<<< HEAD
 activities/1661593905948 2.json
 activities/1662110311030 2.json
 activities/1662282766136 2.json
@@ -81,11 +80,5 @@ GPX_OUT/1679565759083 2.gpx
 GPX_OUT/1679997797693 2.gpx
 GPX_OUT/1680428414724 2.gpx
 GPX_OUT/1680601047067 2.gpx
-=======
-.pdm-python
 
-route.png
-route.svg
-
-.env
->>>>>>> upstream/master
+assets/year_201*.svg
