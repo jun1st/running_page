@@ -7,5 +7,8 @@ GPX_OUT/** merge=ours
 TXT_OUT/** merge=ours
 PNG_OUT/** merge=ours
 TCX_OUT/** merge=ours
+assets/** merge=ours
+activities/** merge=ours
+.github/** merge=ours
 
 # End of .gitattributes
