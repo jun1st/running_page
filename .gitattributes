@@ -1,0 +1,11 @@
+# Keep local running-data files during merges. Files under these directories
+# will prefer the local ("ours") version when a merge would otherwise modify them.
+# This helps prevent upstream data from overwriting or adding tracked running-data.
+
+FIT_OUT/** merge=ours
+GPX_OUT/** merge=ours
+TXT_OUT/** merge=ours
+PNG_OUT/** merge=ours
+TCX_OUT/** merge=ours
+
+# End of .gitattributes

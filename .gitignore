@@ -80,15 +80,3 @@ GPX_OUT/1679565759083 2.gpx
 GPX_OUT/1679997797693 2.gpx
 GPX_OUT/1680428414724 2.gpx
 GPX_OUT/1680601047067 2.gpx
-
-# ignore running data
-FIT_OUT/
-
-# ignore running data
-GPX_OUT/
-
-# ignore running data
-PNG_OUT/
-
-# ignore running data
-TCX_OUT/
