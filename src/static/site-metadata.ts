@@ -16,7 +16,7 @@ const getBasePath = () => {
 
 const data: ISiteMetadataResult = {
   siteTitle: 'Running Page',
-  siteUrl: 'https://running.fengqijun.me',
+  siteUrl: 'https://running.fengqijun.xyz',
   logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
   description: 'Running logs',
   navLinks: [
@@ -26,7 +26,7 @@ const data: ISiteMetadataResult = {
     },
     {
       name: 'Blog',
-      url: 'https://blog.fengqijun.me',
+      url: 'https://blog.fengqijun.xyz',
     },
     {
       name: 'Github',
